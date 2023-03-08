@@ -18,6 +18,12 @@ function damjanwp_add_custom_fields() {
     );
 }
 
+function damjanwp_admin_enqueue_scripts() {
+    wp_enqueue_style('damjanwp-admin-styles', plugin_dir_url(__FILE__) . 'admin.css');
+}
+add_action('admin_enqueue_scripts', 'damjanwp_admin_enqueue_scripts');
+
+
 function damjanwp_url_box_html($post) {
     $url = get_post_meta($post->ID, 'damjanwp_url', true);
     $url_text = get_post_meta($post->ID, 'damjanwp_url_text', true);
