@@ -30,17 +30,24 @@ function damjanwp_url_box_html($post) {
     $cta_heading = get_post_meta($post->ID, 'damjanwp_cta_heading', true);
     $cta_text = get_post_meta($post->ID, 'damjanwp_cta_text', true);
     ?>
-    <label for="damjanwp_url">Custom URL:</label>
-    <input type="text" name="damjanwp_url" id="damjanwp_url" value="<?php echo esc_attr($url); ?>">
-    <br>
-    <label for="damjanwp_url_text">URL Text:</label>
-    <input type="text" name="damjanwp_url_text" id="damjanwp_url_text" value="<?php echo esc_attr($url_text); ?>">
-    <br>
-    <label for="damjanwp_cta_heading">CTA Heading:</label>
-    <input type="text" name="damjanwp_cta_heading" id="damjanwp_cta_heading" value="<?php echo esc_attr($cta_heading); ?>">
-    <br>
-    <label for="damjanwp_cta_text">CTA Text:</label>
-    <input type="text" name="damjanwp_cta_text" id="damjanwp_cta_text" value="<?php echo esc_attr($cta_text); ?>">
+    <div class="damjanwp-custom-fields">
+        <div class="damjanwp-custom-field">
+            <label for="damjanwp_url">Custom URL:</label>
+            <input type="text" name="damjanwp_url" id="damjanwp_url" value="<?php echo esc_attr($url); ?>">
+        </div>
+        <div class="damjanwp-custom-field">
+            <label for="damjanwp_url_text">URL Text:</label>
+            <input type="text" name="damjanwp_url_text" id="damjanwp_url_text" value="<?php echo esc_attr($url_text); ?>">
+        </div>
+        <div class="damjanwp-custom-field">
+            <label for="damjanwp_cta_heading">CTA Heading:</label>
+            <input type="text" name="damjanwp_cta_heading" id="damjanwp_cta_heading" value="<?php echo esc_attr($cta_heading); ?>">
+        </div>
+        <div class="damjanwp-custom-field">
+            <label for="damjanwp_cta_text">CTA Text:</label>
+            <input type="text" name="damjanwp_cta_text" id="damjanwp_cta_text" value="<?php echo esc_attr($cta_text); ?>">
+        </div>
+    </div>
     <?php
 }
 
